@@ -11,7 +11,7 @@ st.write("Classify messages as Spam or Ham using Support Vector Machine")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('spam_data.csv')
+    df = pd.read_csv('email_data.csv')
     return df
 
 df = load_data()
