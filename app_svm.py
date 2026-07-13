@@ -18,7 +18,7 @@ df = load_data()
 
 # Preprocessing
 X = df['message']
-y = df['label'] # 1 = spam, 0 = ham
+y = df['label'] .map ({ 'not spam': 0, 'spam': 1})
 
 # Vectorize
 tfidf = TfidfVectorizer(stop_words='english', max_features=3000)
