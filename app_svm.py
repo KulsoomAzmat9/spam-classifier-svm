@@ -44,5 +44,5 @@ user_input = st.text_area("Enter a message:")
 if st.button("Predict"):
     input_tfidf = tfidf.transform([user_input])
     prediction = model.predict(input_tfidf)[0]
-    result = "🚨 Spam" if prediction == 1 else "✅ Ham"
+    result = "🚨 Spam" if prediction == 1 else "✅ NOT SPAM"
     st.success(f"Prediction: {result}")
