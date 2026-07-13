@@ -11,13 +11,13 @@ st.write("Classify messages as Spam or Ham using Support Vector Machine")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('email_data.csv')
+    df = pd.read_csv('email_data.csv', encoding='latin-1')
     return df
 
 df = load_data()
 
 # Preprocessing
-X = df['message']
+X = df['text']
 y = df['label'] .map ({ 'not spam': 0, 'spam': 1})
 
 # Vectorize
