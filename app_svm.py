@@ -58,3 +58,17 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax)
 st.pyplot(fig)
 
 # 5. PREDICTION
+st.subheader("4. Test Your Own Email")
+user_input = st.text_area("✍️ Type or paste an email here:")
+
+if st.button("🔍 Predict"):
+    if user_input:
+        input_vec = vectorizer.transform([user_input])
+        prediction = model.predict(input_vec)[0]
+
+        if prediction == 1:
+            st.error("🚨 This is SPAM!")
+        else:
+            st.success("✅ This is NOT Spam")
+    else:
+        st.warning("Please enter some text first")
