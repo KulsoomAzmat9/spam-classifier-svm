@@ -1,6 +1,6 @@
 # Email Spam Classifier using Support Vector Machine (SVM)
 
-This is a Machine Learning project that classifies emails as *Spam* or *Not Spam* using Support Vector Machine and TF-IDF Vectorization. 
+This is a Machine Learning project that classifies emails as Spam or Not Spam using Support Vector Machine and TF-IDF Vectorization. 
 
 ## 📌 Project Overview
 Spam detection is a binary text classification problem. This project trains an SVM model on an email dataset and provides a web interface to test new email messages.
@@ -12,7 +12,7 @@ Spam detection is a binary text classification problem. This project trains an S
 - Model and vectorizer saved using joblib
 
 ## 🛠️ Tech Stack
-- *Language*: Python 3.x
+- *Language*: Python 
 - *Libraries*: scikit-learn, pandas, numpy, joblib
 - *Vectorizer*: TfidfVectorizer
 - *Model*: SVC / LinearSVC
